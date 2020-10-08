@@ -14,20 +14,21 @@ describe "Workspace Class" do
   end
 
   describe 'select_user' do
-    # it "throws an argument error with a bad ID" do
-    #   # workspace = Workspace.new
-    #   VCR.use_cassette("id_error") do
-    #     expect{ workspace.select_user('fake') }.must_raise ArgumentError
-    #   end
-    # end
+    it "selects the user" do
+      VCR.use_cassette("name") do
+        workspace.select_user("ida.goitom")
+        expect(workspace.selected["name"]).must_equal "ida.goitom"
+      end
+    end
   end
 
   describe 'select_channel' do
-    # it "throws an argument error with a bad ID" do
-    #   VCR.use_cassette("workspace") do
-    #     expect{ workspace.select_channel('fake') }.must_raise ArgumentError
-    #   end
-    # end
+    it "selects the right channel when provided name or ID" do
+      VCR.use_cassette("workspace") do
+        workspace.select_channel("random")
+        expect(workspace.selected["name"]).must_equal "random"
+      end
+    end
   end
 end
 

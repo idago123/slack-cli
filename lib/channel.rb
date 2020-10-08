@@ -8,6 +8,7 @@ CHANNELS_URL = 'https://slack.com/api/conversations.list'
 
 class Channel < Recipient
   attr_reader :topic, :member_count
+
   def initialize
     @topic
     @member_count

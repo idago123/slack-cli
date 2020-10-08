@@ -9,7 +9,7 @@ class Workspace
   def initialize
     @users = User.list_all
     @channels = Channel.list_all
-    @selected
+    @selected = nil
   end
 
   def select_user(user)
