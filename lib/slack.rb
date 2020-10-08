@@ -12,7 +12,7 @@ def main
 
   end_program = false
   until end_program
-    puts "There are several options to interact with this program. Please pick one: "
+    puts "\nThere are several options to interact with this program. Please pick one: "
     puts "1. list users"
     puts "2. list channels"
     puts "3. select user"

@@ -34,7 +34,7 @@ class Workspace
     end
 
     if @selected.nil?
-      raise ArgumentError, "This channel was not found."
+      puts "This channel was not found."
     end
 
     return @selected
@@ -42,7 +42,8 @@ class Workspace
 
   def show_details
     if @selected.nil?
-      raise ArgumentError, "No recipient is currently selected."
+      puts "No recipient is currently selected."
+      return
     end
 
     if @selected["is_channel"]
