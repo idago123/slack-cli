@@ -12,14 +12,12 @@ describe "User class" do
         expect(response[0].real_name).must_equal "Slackbot"
       end
     end
+  end
 
-    # it "will raise an exception if the search fails" do
-    #   VCR.use_cassette("location_find") do
-    #     location = ""
-    #     expect {
-    #       response = get_location(location)
-    #     }.must_raise SearchError
-    #   end
-    # end
+  describe "details" do
+    it "must return correct details" do
+      test_user = User.new(slack_id: "891012", name: "anna" , real_name: "anna")
+      expect(test_user.details).must_equal "Name: anna, ID: 891012, Username: anna"
+    end
   end
 end
