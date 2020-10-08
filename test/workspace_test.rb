@@ -15,9 +15,9 @@ describe "Workspace Class" do
 
   describe 'select_user' do
     it "selects the user" do
-      VCR.use_cassette("name") do
+      VCR.use_cassette("workspace") do
         workspace.select_user("ida.goitom")
-        expect(workspace.selected["name"]).must_equal "ida.goitom"
+        expect(workspace.selected.name).must_equal "ida.goitom"
       end
     end
   end
@@ -26,9 +26,19 @@ describe "Workspace Class" do
     it "selects the right channel when provided name or ID" do
       VCR.use_cassette("workspace") do
         workspace.select_channel("random")
-        expect(workspace.selected["name"]).must_equal "random"
+        expect(workspace.selected.name).must_equal "random"
       end
     end
   end
+
+  it "will raise an error when given an invalid channel" do
+    # VCR.use_cassette("slack-posts") do
+    #   exception = expect {
+    #     new_recipient = Recipient.new()
+    #         .send_message("This post should not work", "invalid-channel")
+    #   }.must_raise SlackApiError
+    #
+    #   expect(exception.message).must_equal 'Error when posting This post should not work to invalid-channel, error: channel_not_found'
+    end
 end
 

@@ -1,16 +1,15 @@
 require_relative 'test_helper'
 
 describe "User class" do
-  let(:user) { User.new }
 
   describe "list_all" do
     it "get users" do
       VCR.use_cassette("user") do
         response = User.list_all
 
-        expect(response["members"][0]["name"]).wont_be_nil
-        expect(response["members"][0]["name"]).must_equal "slackbot"
-        expect(response["members"][0]["real_name"]).must_equal "Slackbot"
+        expect(response[0].name).wont_be_nil
+        expect(response[0].name).must_equal "slackbot"
+        expect(response[0].real_name).must_equal "Slackbot"
       end
     end
 

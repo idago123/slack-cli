@@ -8,7 +8,7 @@ def main
 
   workspace = Workspace.new
 
-  puts "We have #{workspace.channels["channels"].size} channels and #{workspace.users["members"].size} users loaded.\n"
+  puts "We have #{workspace.channels.size} channels and #{workspace.users.size} users loaded.\n"
 
   end_program = false
   until end_program
@@ -18,25 +18,28 @@ def main
     puts "3. select user"
     puts "4. select channel"
     puts "5. details"
-    puts "6. quit\n\n"
+    puts "6. send message"
+    puts "7. quit\n\n"
 
     user_input = gets.chomp
 
     case user_input
     when "list users"
-      User.details
+      tp User.list_all, "real_name", "slack_id", "name"
     when "list channels"
-      Channel.details
+      tp Channel.list_all, "name", "topic", "slack_id", "member_count"
     when "select user"
       puts "Please enter a user name or user id:"
       select_user_input = gets.chomp
       workspace.select_user(select_user_input)
     when "select channel"
-      puts "Select a channel name or id: "
+      puts "Select a channel name or id:"
       channel_input = gets.chomp
       workspace.select_channel(channel_input)
     when "details"
-      workspace.show_details()
+      puts workspace.show_details
+    when "send message"
+      workspace.send_message
     when "quit"
       puts "Thank you for using the Ada Slack CLI"
       end_program = true
@@ -47,24 +50,3 @@ end
 main if __FILE__ == $PROGRAM_NAME
 
 
-# require 'dotenv'
-# require 'httparty'
-#
-# Dotenv.load
-#
-# def main
-#   puts "Welcome to the Ada Slack CLI!"
-#   #workspace = Workspace.new
-#
-#   # TODO project
-#   puts ENV['SLACK_API_TOKEN']
-#   response = HTTParty.post('https://slack.com/api/chat.postMessage', body: {
-#       token: ENV['SLACK_API_TOKEN'],
-#       channel: 'test-channel2',
-#       text: "my test"
-#   })
-#   pp response
-#   puts "Thank you for using the Ada Slack CLI"
-# end
-#
-# main if __FILE__ == $PROGRAM_NAME

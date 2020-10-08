@@ -1,8 +1,6 @@
 require_relative 'user'
 require_relative 'channel'
 
-MESSAGE_URL = 'https://slack.com/api/chat.postMessage'
-
 class Workspace
   attr_reader :users, :channels, :selected
 
@@ -13,8 +11,8 @@ class Workspace
   end
 
   def select_user(user)
-    @users["members"].each do |member|
-      if user == member["id"] || user == member["name"]
+    @users.each do |member|
+      if user == member.slack_id || user == member.name
         @selected = member
       end
     end
@@ -27,8 +25,8 @@ class Workspace
   end
 
   def select_channel(name)
-    @channels["channels"].each do |channel|
-      if name == channel["name"] || name == channel["id"]
+    @channels.each do |channel|
+      if name == channel.name || name == channel.slack_id
         @selected = channel
       end
     end
@@ -46,11 +44,18 @@ class Workspace
       return
     end
 
-    if @selected["is_channel"]
-      puts "Name: #{@selected["name"]}, Topic: #{@selected["topic"]}
-      ID: #{@selected["id"]} Member Count: #{@selected["num_members"]}"
-    else
-      puts "Name: #{@selected["real_name"]}, ID: #{@selected["id"]} Username: #{@selected["name"]}"
+    @selected.details
+  end
+
+  def send_message
+    if @selected.nil?
+      puts "No recipient is currently selected to send a message to."
+      return
     end
+
+    puts "Please enter a message:"
+    message = gets.chomp
+
+    @selected.send_message(message)
   end
 end

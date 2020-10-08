@@ -13,7 +13,6 @@ require_relative '../lib/workspace'
 require_relative '../lib/slack'
 
 Dotenv.load
-
 Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
 
 VCR.configure do |config|
@@ -30,7 +29,7 @@ VCR.configure do |config|
   }
 
   # Don't leave our token lying around in a cassette file.
-  config.filter_sensitive_data("<LOCATIONIQ_TOKEN>") do
-    ENV["LOCATIONIQ_TOKEN"]
+  config.filter_sensitive_data("<SLACK_API_TOKEN>") do
+    ENV["SLACK_API_TOKEN"]
   end
 end

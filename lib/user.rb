@@ -1,29 +1,28 @@
-require 'httparty'
-require 'dotenv'
 require_relative 'recipient'
 
-Dotenv.load
-
-USERS_URL = 'https://slack.com/api/users.list'
-
 class User < Recipient
-  attr_reader :real_name, :status_text, :status_emoji
+  attr_reader :real_name
 
-  def initialize
-    super(slack_id)
-    super(name)
-    @real_name
-    @status_text
-    @status_emoji
+  def initialize(slack_id:, name:, real_name:)
+    super(slack_id: slack_id, name: name)
+    @real_name = real_name
+    # @status_text
+    # @status_emoji
   end
 
-  def self.details
-    self.list_all["members"].each do |member|
-      puts "Name: #{member["real_name"]}, ID: #{member["id"]} Username: #{member["name"]}"
-    end
+  def details
+    return "Name: #{@real_name}, ID: #{@slack_id}, Username: #{@name}"
   end
 
   def self.list_all
-    self.get(USERS_URL, PARAMS)
+    response = self.get(USERS_URL, PARAMS)
+
+    response["members"].map do |member|
+      User.new(
+          slack_id: member["id"],
+          name: member["name"],
+          real_name: member["real_name"]
+      )
+    end
   end
 end
