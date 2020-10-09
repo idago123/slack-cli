@@ -40,7 +40,7 @@ class Recipient
     unless response.code == 200 && response.parsed_response["ok"]
       raise SlackApiError, "Error when posting #{message} to #{@slack_id}, error: #{response.parsed_response["error"]}"
     end
-
+    return response
   end
 
   def details

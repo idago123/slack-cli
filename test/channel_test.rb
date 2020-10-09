@@ -23,6 +23,13 @@ describe "Channel class" do
         }.must_raise SlackApiError
       end
     end
+    it "sends a message to a channel" do
+      VCR.use_cassette("channel") do
+          new_recipient = Channel.new(slack_id: "C01BW93UN8N", name: "random", topic: "super random!", member_count: 3)
+          expect(new_recipient.send_message("hello testing").code).must_equal 200
+      end
+    end
+
   end
 
   describe "details" do

@@ -1,82 +1,11 @@
 ---
 http_interactions:
 - request:
-    method: get
-    uri: https://slack.com/api/conversations.list?token=<SLACK_API_TOKEN>
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Thu, 08 Oct 2020 21:24:45 GMT
-      Server:
-      - Apache
-      X-Slack-Req-Id:
-      - 69d06e9f6e6b5f0b8c43ef166cea2956
-      X-Oauth-Scopes:
-      - identify,channels:read,users:read,chat:write
-      Access-Control-Expose-Headers:
-      - x-slack-req-id, retry-after
-      Access-Control-Allow-Origin:
-      - "*"
-      X-Slack-Backend:
-      - r
-      X-Content-Type-Options:
-      - nosniff
-      Expires:
-      - Mon, 26 Jul 1997 05:00:00 GMT
-      Cache-Control:
-      - private, no-cache, no-store, must-revalidate
-      X-Xss-Protection:
-      - '0'
-      X-Accepted-Oauth-Scopes:
-      - channels:read,groups:read,mpim:read,im:read,read
-      Access-Control-Allow-Headers:
-      - slack-route, x-slack-version-ts, x-b3-traceid, x-b3-spanid, x-b3-parentspanid,
-        x-b3-sampled, x-b3-flags
-      Vary:
-      - Accept-Encoding
-      Pragma:
-      - no-cache
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Referrer-Policy:
-      - no-referrer
-      Content-Length:
-      - '692'
-      Content-Type:
-      - application/json; charset=utf-8
-      X-Via:
-      - haproxy-www-yo7l,haproxy-edge-iad-bbo4
-    body:
-      encoding: ASCII-8BIT
-      string: '{"ok":true,"channels":[{"id":"C01BW93UN8N","name":"random","is_channel":true,"is_group":false,"is_im":false,"created":1602015082,"is_archived":false,"is_general":false,"unlinked":0,"name_normalized":"random","is_shared":false,"parent_conversation":null,"creator":"U01C95Y5RUL","is_ext_shared":false,"is_org_shared":false,"shared_team_ids":["T01C37A2BAP"],"pending_shared":[],"pending_connected_team_ids":[],"is_pending_ext_shared":false,"is_member":true,"is_private":false,"is_mpim":false,"topic":{"value":"super
-        random!","creator":"U01BN903TU7","last_set":1602021102},"purpose":{"value":"This
-        channel is for... well, everything else. It\u2019s a place for team jokes,
-        spur-of-the-moment ideas, and funny GIFs. Go wild!","creator":"U01C95Y5RUL","last_set":1602015082},"previous_names":[],"num_members":4},{"id":"C01C37A2T1R","name":"general","is_channel":true,"is_group":false,"is_im":false,"created":1602015081,"is_archived":false,"is_general":true,"unlinked":0,"name_normalized":"general","is_shared":false,"parent_conversation":null,"creator":"U01C95Y5RUL","is_ext_shared":false,"is_org_shared":false,"shared_team_ids":["T01C37A2BAP"],"pending_shared":[],"pending_connected_team_ids":[],"is_pending_ext_shared":false,"is_member":true,"is_private":false,"is_mpim":false,"topic":{"value":"very
-        general","creator":"U01BN903TU7","last_set":1602021116},"purpose":{"value":"This
-        is the one channel that will always include everyone. It\u2019s a great spot
-        for announcements and team-wide conversations.","creator":"U01C95Y5RUL","last_set":1602015081},"previous_names":[],"num_members":2},{"id":"C01CSS4N2QG","name":"slack-cli","is_channel":true,"is_group":false,"is_im":false,"created":1602015214,"is_archived":false,"is_general":false,"unlinked":0,"name_normalized":"slack-cli","is_shared":false,"parent_conversation":null,"creator":"U01C95Y5RUL","is_ext_shared":false,"is_org_shared":false,"shared_team_ids":["T01C37A2BAP"],"pending_shared":[],"pending_connected_team_ids":[],"is_pending_ext_shared":false,"is_member":true,"is_private":false,"is_mpim":false,"topic":{"value":"","creator":"","last_set":0},"purpose":{"value":"This
-        *channel* is for working on a project. Hold meetings, share docs, and make
-        decisions together with your team.","creator":"U01C95Y5RUL","last_set":1602015214},"previous_names":[],"num_members":2}],"response_metadata":{"next_cursor":""}}'
-  recorded_at: Thu, 08 Oct 2020 21:24:45 GMT
-- request:
     method: post
     uri: https://slack.com/api/chat.postMessage
     body:
       encoding: UTF-8
-      string: token=xoxb-1411248079363-1404340511606-j0fNU7www00xC96MLNvW9LiQ&channel=fake&text=This%20post%20should%20not%20work
+      string: token=xoxb-1411248079363-1404340511606-LW6ZsnAsDY3pR2vibGHzMER5&channel=fake&text=This%20post%20should%20not%20work
     headers:
       Content-Type:
       - application/x-www-form-urlencoded
@@ -92,11 +21,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 08 Oct 2020 21:48:43 GMT
+      - Fri, 09 Oct 2020 17:33:28 GMT
       Server:
       - Apache
       X-Slack-Req-Id:
-      - 68b4338d0614013933751b1195290491
+      - 81641afa739535142f8ea5460e120c80
       X-Oauth-Scopes:
       - chat:write,users:read,channels:read
       Access-Control-Expose-Headers:
@@ -131,17 +60,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       X-Via:
-      - haproxy-www-dqm5,haproxy-edge-pdx-1x0h
+      - haproxy-www-kg4q,haproxy-edge-pdx-paag
     body:
       encoding: ASCII-8BIT
       string: '{"ok":false,"error":"channel_not_found"}'
-  recorded_at: Thu, 08 Oct 2020 21:48:43 GMT
+  recorded_at: Fri, 09 Oct 2020 17:33:29 GMT
 - request:
     method: post
     uri: https://slack.com/api/chat.postMessage
     body:
       encoding: UTF-8
-      string: token=xoxb-1411248079363-1411069541026-h2T6zZv2KCGYwTwRUEfsYZsp&channel=fake&text=This%20post%20should%20not%20work
+      string: token=xoxb-1411248079363-1404340511606-LW6ZsnAsDY3pR2vibGHzMER5&channel=C01BW93UN8N&text=hello%20testing
     headers:
       Content-Type:
       - application/x-www-form-urlencoded
@@ -157,13 +86,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 08 Oct 2020 21:55:10 GMT
+      - Fri, 09 Oct 2020 17:33:29 GMT
       Server:
       - Apache
       X-Slack-Req-Id:
-      - e0cd0634a1b909be8d0f2b00ab4abc14
+      - 7a884afa51a599b5dac635f5f2bb742f
       X-Oauth-Scopes:
-      - chat:write,channels:read,users:read
+      - chat:write,users:read,channels:read
       Access-Control-Expose-Headers:
       - x-slack-req-id, retry-after
       Access-Control-Allow-Origin:
@@ -192,13 +121,86 @@ http_interactions:
       Referrer-Policy:
       - no-referrer
       Content-Length:
-      - '60'
+      - '334'
       Content-Type:
       - application/json; charset=utf-8
       X-Via:
-      - haproxy-www-m88x,haproxy-edge-iad-kz0s
+      - haproxy-www-sres,haproxy-edge-pdx-jxbh
     body:
       encoding: ASCII-8BIT
-      string: '{"ok":false,"error":"channel_not_found"}'
-  recorded_at: Thu, 08 Oct 2020 21:55:10 GMT
+      string: '{"ok":true,"channel":"C01BW93UN8N","ts":"1602264809.000500","message":{"bot_id":"B01BN9RATAB","type":"message","text":"hello
+        testing","user":"U01BWA0F1HU","ts":"1602264809.000500","team":"T01C37A2BAP","bot_profile":{"id":"B01BN9RATAB","deleted":false,"name":"C14
+        - Ida - API Project","updated":1602264225,"app_id":"A01C37SFXEX","icons":{"image_36":"https:\/\/a.slack-edge.com\/80588\/img\/plugins\/app\/bot_36.png","image_48":"https:\/\/a.slack-edge.com\/80588\/img\/plugins\/app\/bot_48.png","image_72":"https:\/\/a.slack-edge.com\/80588\/img\/plugins\/app\/service_72.png"},"team_id":"T01C37A2BAP"}}}'
+  recorded_at: Fri, 09 Oct 2020 17:33:29 GMT
+- request:
+    method: get
+    uri: https://slack.com/api/conversations.list?token=<SLACK_API_TOKEN>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 09 Oct 2020 17:33:34 GMT
+      Server:
+      - Apache
+      X-Slack-Req-Id:
+      - 70d1a7bf5f59e9e8d874bfdfbfb691a0
+      X-Oauth-Scopes:
+      - identify,channels:read,users:read,chat:write
+      Access-Control-Expose-Headers:
+      - x-slack-req-id, retry-after
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Slack-Backend:
+      - r
+      X-Content-Type-Options:
+      - nosniff
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      X-Xss-Protection:
+      - '0'
+      X-Accepted-Oauth-Scopes:
+      - channels:read,groups:read,mpim:read,im:read,read
+      Access-Control-Allow-Headers:
+      - slack-route, x-slack-version-ts, x-b3-traceid, x-b3-spanid, x-b3-parentspanid,
+        x-b3-sampled, x-b3-flags
+      Vary:
+      - Accept-Encoding
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Referrer-Policy:
+      - no-referrer
+      Content-Length:
+      - '692'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Via:
+      - haproxy-www-oppt,haproxy-edge-pdx-68eo
+    body:
+      encoding: ASCII-8BIT
+      string: '{"ok":true,"channels":[{"id":"C01BW93UN8N","name":"random","is_channel":true,"is_group":false,"is_im":false,"created":1602015082,"is_archived":false,"is_general":false,"unlinked":0,"name_normalized":"random","is_shared":false,"parent_conversation":null,"creator":"U01C95Y5RUL","is_ext_shared":false,"is_org_shared":false,"shared_team_ids":["T01C37A2BAP"],"pending_shared":[],"pending_connected_team_ids":[],"is_pending_ext_shared":false,"is_member":true,"is_private":false,"is_mpim":false,"topic":{"value":"super
+        random!","creator":"U01BN903TU7","last_set":1602021102},"purpose":{"value":"This
+        channel is for... well, everything else. It\u2019s a place for team jokes,
+        spur-of-the-moment ideas, and funny GIFs. Go wild!","creator":"U01C95Y5RUL","last_set":1602015082},"previous_names":[],"num_members":4},{"id":"C01C37A2T1R","name":"general","is_channel":true,"is_group":false,"is_im":false,"created":1602015081,"is_archived":false,"is_general":true,"unlinked":0,"name_normalized":"general","is_shared":false,"parent_conversation":null,"creator":"U01C95Y5RUL","is_ext_shared":false,"is_org_shared":false,"shared_team_ids":["T01C37A2BAP"],"pending_shared":[],"pending_connected_team_ids":[],"is_pending_ext_shared":false,"is_member":true,"is_private":false,"is_mpim":false,"topic":{"value":"very
+        general","creator":"U01BN903TU7","last_set":1602021116},"purpose":{"value":"This
+        is the one channel that will always include everyone. It\u2019s a great spot
+        for announcements and team-wide conversations.","creator":"U01C95Y5RUL","last_set":1602015081},"previous_names":[],"num_members":3},{"id":"C01CSS4N2QG","name":"slack-cli","is_channel":true,"is_group":false,"is_im":false,"created":1602015214,"is_archived":false,"is_general":false,"unlinked":0,"name_normalized":"slack-cli","is_shared":false,"parent_conversation":null,"creator":"U01C95Y5RUL","is_ext_shared":false,"is_org_shared":false,"shared_team_ids":["T01C37A2BAP"],"pending_shared":[],"pending_connected_team_ids":[],"is_pending_ext_shared":false,"is_member":true,"is_private":false,"is_mpim":false,"topic":{"value":"","creator":"","last_set":0},"purpose":{"value":"This
+        *channel* is for working on a project. Hold meetings, share docs, and make
+        decisions together with your team.","creator":"U01C95Y5RUL","last_set":1602015214},"previous_names":[],"num_members":3}],"response_metadata":{"next_cursor":""}}'
+  recorded_at: Fri, 09 Oct 2020 17:33:34 GMT
 recorded_with: VCR 6.0.0

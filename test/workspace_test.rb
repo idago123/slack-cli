@@ -30,15 +30,5 @@ describe "Workspace Class" do
       end
     end
   end
-
-  it "will raise an error when given an invalid channel" do
-    # VCR.use_cassette("slack-posts") do
-    #   exception = expect {
-    #     new_recipient = Recipient.new()
-    #         .send_message("This post should not work", "invalid-channel")
-    #   }.must_raise SlackApiError
-    #
-    #   expect(exception.message).must_equal 'Error when posting This post should not work to invalid-channel, error: channel_not_found'
-    end
 end
 

@@ -6,8 +6,6 @@ class User < Recipient
   def initialize(slack_id:, name:, real_name:)
     super(slack_id: slack_id, name: name)
     @real_name = real_name
-    # @status_text
-    # @status_emoji
   end
 
   def details
