@@ -5,7 +5,7 @@ http_interactions:
     uri: https://slack.com/api/chat.postMessage
     body:
       encoding: UTF-8
-      string: token=xoxb-1411248079363-1404340511606-LW6ZsnAsDY3pR2vibGHzMER5&channel=fake&text=This%20post%20should%20not%20work
+      string: token=xoxb-1411248079363-1404340511606-fOwOmFcNFbWUGeb3ZyMTMXRE&channel=fake&text=This%20post%20should%20not%20work
     headers:
       Content-Type:
       - application/x-www-form-urlencoded
@@ -21,11 +21,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 09 Oct 2020 17:33:28 GMT
+      - Fri, 09 Oct 2020 17:43:47 GMT
       Server:
       - Apache
       X-Slack-Req-Id:
-      - 81641afa739535142f8ea5460e120c80
+      - 2d733a8d8fccc28aa59eaff2366e7ea2
       X-Oauth-Scopes:
       - chat:write,users:read,channels:read
       Access-Control-Expose-Headers:
@@ -60,17 +60,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       X-Via:
-      - haproxy-www-kg4q,haproxy-edge-pdx-paag
+      - haproxy-www-na7m,haproxy-edge-pdx-gxzc
     body:
       encoding: ASCII-8BIT
       string: '{"ok":false,"error":"channel_not_found"}'
-  recorded_at: Fri, 09 Oct 2020 17:33:29 GMT
+  recorded_at: Fri, 09 Oct 2020 17:43:47 GMT
 - request:
     method: post
     uri: https://slack.com/api/chat.postMessage
     body:
       encoding: UTF-8
-      string: token=xoxb-1411248079363-1404340511606-LW6ZsnAsDY3pR2vibGHzMER5&channel=C01BW93UN8N&text=hello%20testing
+      string: token=xoxb-1411248079363-1404340511606-fOwOmFcNFbWUGeb3ZyMTMXRE&channel=C01BW93UN8N&text=hello%20testing
     headers:
       Content-Type:
       - application/x-www-form-urlencoded
@@ -86,11 +86,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 09 Oct 2020 17:33:29 GMT
+      - Fri, 09 Oct 2020 17:43:48 GMT
       Server:
       - Apache
       X-Slack-Req-Id:
-      - 7a884afa51a599b5dac635f5f2bb742f
+      - d08fe44cee134d767061fb96d409e63a
       X-Oauth-Scopes:
       - chat:write,users:read,channels:read
       Access-Control-Expose-Headers:
@@ -125,13 +125,13 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       X-Via:
-      - haproxy-www-sres,haproxy-edge-pdx-jxbh
+      - haproxy-www-ngke,haproxy-edge-pdx-locq
     body:
       encoding: ASCII-8BIT
-      string: '{"ok":true,"channel":"C01BW93UN8N","ts":"1602264809.000500","message":{"bot_id":"B01BN9RATAB","type":"message","text":"hello
-        testing","user":"U01BWA0F1HU","ts":"1602264809.000500","team":"T01C37A2BAP","bot_profile":{"id":"B01BN9RATAB","deleted":false,"name":"C14
-        - Ida - API Project","updated":1602264225,"app_id":"A01C37SFXEX","icons":{"image_36":"https:\/\/a.slack-edge.com\/80588\/img\/plugins\/app\/bot_36.png","image_48":"https:\/\/a.slack-edge.com\/80588\/img\/plugins\/app\/bot_48.png","image_72":"https:\/\/a.slack-edge.com\/80588\/img\/plugins\/app\/service_72.png"},"team_id":"T01C37A2BAP"}}}'
-  recorded_at: Fri, 09 Oct 2020 17:33:29 GMT
+      string: '{"ok":true,"channel":"C01BW93UN8N","ts":"1602265428.001000","message":{"bot_id":"B01BN9RATAB","type":"message","text":"hello
+        testing","user":"U01BWA0F1HU","ts":"1602265428.001000","team":"T01C37A2BAP","bot_profile":{"id":"B01BN9RATAB","deleted":false,"name":"C14
+        - Ida - API Project","updated":1602265137,"app_id":"A01C37SFXEX","icons":{"image_36":"https:\/\/a.slack-edge.com\/80588\/img\/plugins\/app\/bot_36.png","image_48":"https:\/\/a.slack-edge.com\/80588\/img\/plugins\/app\/bot_48.png","image_72":"https:\/\/a.slack-edge.com\/80588\/img\/plugins\/app\/service_72.png"},"team_id":"T01C37A2BAP"}}}'
+  recorded_at: Fri, 09 Oct 2020 17:43:48 GMT
 - request:
     method: get
     uri: https://slack.com/api/conversations.list?token=<SLACK_API_TOKEN>
@@ -151,11 +151,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 09 Oct 2020 17:33:34 GMT
+      - Fri, 09 Oct 2020 17:43:49 GMT
       Server:
       - Apache
       X-Slack-Req-Id:
-      - 70d1a7bf5f59e9e8d874bfdfbfb691a0
+      - 33a3b5c979172b5149b7fe0b0ef36251
       X-Oauth-Scopes:
       - identify,channels:read,users:read,chat:write
       Access-Control-Expose-Headers:
@@ -186,11 +186,11 @@ http_interactions:
       Referrer-Policy:
       - no-referrer
       Content-Length:
-      - '692'
+      - '691'
       Content-Type:
       - application/json; charset=utf-8
       X-Via:
-      - haproxy-www-oppt,haproxy-edge-pdx-68eo
+      - haproxy-www-7n0o,haproxy-edge-pdx-pim9
     body:
       encoding: ASCII-8BIT
       string: '{"ok":true,"channels":[{"id":"C01BW93UN8N","name":"random","is_channel":true,"is_group":false,"is_im":false,"created":1602015082,"is_archived":false,"is_general":false,"unlinked":0,"name_normalized":"random","is_shared":false,"parent_conversation":null,"creator":"U01C95Y5RUL","is_ext_shared":false,"is_org_shared":false,"shared_team_ids":["T01C37A2BAP"],"pending_shared":[],"pending_connected_team_ids":[],"is_pending_ext_shared":false,"is_member":true,"is_private":false,"is_mpim":false,"topic":{"value":"super
@@ -199,8 +199,8 @@ http_interactions:
         spur-of-the-moment ideas, and funny GIFs. Go wild!","creator":"U01C95Y5RUL","last_set":1602015082},"previous_names":[],"num_members":4},{"id":"C01C37A2T1R","name":"general","is_channel":true,"is_group":false,"is_im":false,"created":1602015081,"is_archived":false,"is_general":true,"unlinked":0,"name_normalized":"general","is_shared":false,"parent_conversation":null,"creator":"U01C95Y5RUL","is_ext_shared":false,"is_org_shared":false,"shared_team_ids":["T01C37A2BAP"],"pending_shared":[],"pending_connected_team_ids":[],"is_pending_ext_shared":false,"is_member":true,"is_private":false,"is_mpim":false,"topic":{"value":"very
         general","creator":"U01BN903TU7","last_set":1602021116},"purpose":{"value":"This
         is the one channel that will always include everyone. It\u2019s a great spot
-        for announcements and team-wide conversations.","creator":"U01C95Y5RUL","last_set":1602015081},"previous_names":[],"num_members":3},{"id":"C01CSS4N2QG","name":"slack-cli","is_channel":true,"is_group":false,"is_im":false,"created":1602015214,"is_archived":false,"is_general":false,"unlinked":0,"name_normalized":"slack-cli","is_shared":false,"parent_conversation":null,"creator":"U01C95Y5RUL","is_ext_shared":false,"is_org_shared":false,"shared_team_ids":["T01C37A2BAP"],"pending_shared":[],"pending_connected_team_ids":[],"is_pending_ext_shared":false,"is_member":true,"is_private":false,"is_mpim":false,"topic":{"value":"","creator":"","last_set":0},"purpose":{"value":"This
+        for announcements and team-wide conversations.","creator":"U01C95Y5RUL","last_set":1602015081},"previous_names":[],"num_members":4},{"id":"C01CSS4N2QG","name":"slack-cli","is_channel":true,"is_group":false,"is_im":false,"created":1602015214,"is_archived":false,"is_general":false,"unlinked":0,"name_normalized":"slack-cli","is_shared":false,"parent_conversation":null,"creator":"U01C95Y5RUL","is_ext_shared":false,"is_org_shared":false,"shared_team_ids":["T01C37A2BAP"],"pending_shared":[],"pending_connected_team_ids":[],"is_pending_ext_shared":false,"is_member":true,"is_private":false,"is_mpim":false,"topic":{"value":"","creator":"","last_set":0},"purpose":{"value":"This
         *channel* is for working on a project. Hold meetings, share docs, and make
-        decisions together with your team.","creator":"U01C95Y5RUL","last_set":1602015214},"previous_names":[],"num_members":3}],"response_metadata":{"next_cursor":""}}'
-  recorded_at: Fri, 09 Oct 2020 17:33:34 GMT
+        decisions together with your team.","creator":"U01C95Y5RUL","last_set":1602015214},"previous_names":[],"num_members":2}],"response_metadata":{"next_cursor":""}}'
+  recorded_at: Fri, 09 Oct 2020 17:43:49 GMT
 recorded_with: VCR 6.0.0
